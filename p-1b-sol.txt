@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: Unlicensed
+
+pragma solidity ^0.7.0;
+
+    //@dev Store & retrieve value in a variable
+
+contract Test {
+
+    uint score = 1;
+    string level = "a";
+
+    //store value in variable
+   
+    function store(uint _score) public {
+        score = _score;
+    }
+
+    //dev Return value 
+    
+    function retrieve() public view returns (uint) {
+        return score;
+    }
+
+    //dev Return value 
+    function storelevel (string memory _level) public {
+        level = _level;
+    }
+
+    //dev Return string 
+
+    function retrievelevel() public view returns (string memory) {
+        return level;
+    }    
+}
