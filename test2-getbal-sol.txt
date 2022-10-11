@@ -1,0 +1,66 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+contract Loop {
+    
+    uint[] arr;
+    uint160 add;
+    uint bal;
+    string public greet = "Hello World!";
+
+    //struct list {
+        //string greet;
+        //uint count;
+   // } 
+
+    function push(uint i) public {
+        // Append to array
+        // This will increase the array length by 1.
+        arr.push(i);
+    }
+    //function getAdd() public view returns (uint160 _add) {
+        //bal = uint160(address(_add).balance);
+        //return(uint160(bal)) ;
+    //}
+
+     function setadd(uint160 _add) public view returns (uint160 bal, uint160 _frm){
+        bal = uint160 (address(_add).balance);
+        _frm = _add;
+        return(bal, _frm);
+        
+    }
+    
+    function getArr() public view returns (uint[] memory) {
+        return arr;
+    }
+    function loop() public {
+        // for loop
+        for (uint i = 0; i < 10; i++) {
+            arr.push(i);
+            
+                        
+        }
+    }
+        function remove(uint index) public {
+        // Delete does not change the array length.
+        // It resets the value at index to it's default value,
+        // in this case 0
+        delete arr[index];
+    }
+
+
+      uint randNonce = 0;
+  // Create attackVictoryProbability here
+
+        function randMod(uint _modulus) public view  returns(uint) {
+        //randNonce++;
+        return uint(keccak256(abi.encodePacked(block.timestamp, msg.sender, randNonce))) % _modulus;
+        }
+
+    
+}
+
+      
+  
+
+

@@ -1,0 +1,38 @@
+
+    Pragma statements
+    Import statements
+    Interfaces
+    Libraries
+    Contracts
+
+Inside each contract, library or interface, use the following order:
+
+    Type declarations
+    State variables
+    Events
+    Functions
+
+Ordering of Functions
+
+Functions should be grouped according to their visibility and ordered:
+
+    constructor
+    receive function (if exists)
+    fallback function (if exists)
+    external
+    public
+    internal
+    private
+
+Explicitly label the visibility of functions and state variables. Functions can be specified as being external, public, internal, or private. Please understand the differences between them.
+Ordering of Modifiers
+
+The modifier order for a function should be:
+
+    Visibility
+    Mutability
+    Virtual
+    Override
+    Custom modifiers
+
+References

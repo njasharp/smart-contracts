@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.4.8;
+
+contract Game {
+    string user;
+    uint score;
+
+    function setUser(string _user, uint _score) public {
+        user = _user;
+        score = _score;
+    }
+
+    function getUser() public constant returns (string, uint) {
+    return (user, score);
+    }

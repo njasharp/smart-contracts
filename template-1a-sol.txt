@@ -1,0 +1,30 @@
+contract MyContract {
+    constructor() {
+        // ...
+    }
+
+    receive() external payable {
+        // ...
+    }
+
+    fallback() external {
+        // ...
+    }
+
+    // External functions
+    // ...
+
+    // External functions that are view
+    // ...
+
+    // External functions that are pure
+    // ...
+
+    // Public functions
+    // ...
+
+    // Internal functions
+    // ...
+
+    // Private functions
+    // ...
